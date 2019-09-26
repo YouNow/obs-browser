@@ -207,6 +207,15 @@ if (WIN32)
 		COMMAND ${CMAKE_COMMAND} -E copy
 		"${CEF_ROOT_DIR}/Release/v8_context_snapshot.bin"
 		"${CMAKE_BINARY_DIR}/rundir/$<CONFIGURATION>/obs-plugins/${BITS}bit/"
+	
+	install(FILES "${CEF_ROOT_DIR}/Release/chrome_elf.dll" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Release/libcef.dll" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Release/libEGL.dll" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Release/libGLESv2.dll" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Release/natives_blob.bin" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Release/snapshot_blob.bin" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Release/v8_context_snapshot.bin" DESTINATION "obs-plugins/${BITS}bit")
+
 	)
 endif()
 
