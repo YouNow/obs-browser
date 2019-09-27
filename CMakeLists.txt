@@ -209,6 +209,7 @@ if (WIN32)
 		"${CMAKE_BINARY_DIR}/rundir/$<CONFIGURATION>/obs-plugins/${BITS}bit/"
 	)
 
+	# copy cef dlls to package
 	install(FILES "${CEF_ROOT_DIR}/Release/chrome_elf.dll" DESTINATION "obs-plugins/${BITS}bit")
 	install(FILES "${CEF_ROOT_DIR}/Release/libcef.dll" DESTINATION "obs-plugins/${BITS}bit")
 	install(FILES "${CEF_ROOT_DIR}/Release/libEGL.dll" DESTINATION "obs-plugins/${BITS}bit")
@@ -216,6 +217,14 @@ if (WIN32)
 	install(FILES "${CEF_ROOT_DIR}/Release/natives_blob.bin" DESTINATION "obs-plugins/${BITS}bit")
 	install(FILES "${CEF_ROOT_DIR}/Release/snapshot_blob.bin" DESTINATION "obs-plugins/${BITS}bit")
 	install(FILES "${CEF_ROOT_DIR}/Release/v8_context_snapshot.bin" DESTINATION "obs-plugins/${BITS}bit")
+
+	# copy cef dllresources to package
+	install(FILES "${CEF_ROOT_DIR}/Resources/cef.pak" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Resources/cef_100_perecent.pak" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Resources/cef_200_perecent.pak" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Resources/cef_extensions.pak" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Resources/devtools_resources.pak" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Resources/icudtl.dat" DESTINATION "obs-plugins/${BITS}bit")
 
 endif()
 
