@@ -220,8 +220,8 @@ if (WIN32)
 
 	# copy cef dllresources to package
 	install(FILES "${CEF_ROOT_DIR}/Resources/cef.pak" DESTINATION "obs-plugins/${BITS}bit")
-	install(FILES "${CEF_ROOT_DIR}/Resources/cef_100_perecent.pak" DESTINATION "obs-plugins/${BITS}bit")
-	install(FILES "${CEF_ROOT_DIR}/Resources/cef_200_perecent.pak" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Resources/cef_100_percent.pak" DESTINATION "obs-plugins/${BITS}bit")
+	install(FILES "${CEF_ROOT_DIR}/Resources/cef_200_percent.pak" DESTINATION "obs-plugins/${BITS}bit")
 	install(FILES "${CEF_ROOT_DIR}/Resources/cef_extensions.pak" DESTINATION "obs-plugins/${BITS}bit")
 	install(FILES "${CEF_ROOT_DIR}/Resources/devtools_resources.pak" DESTINATION "obs-plugins/${BITS}bit")
 	install(FILES "${CEF_ROOT_DIR}/Resources/icudtl.dat" DESTINATION "obs-plugins/${BITS}bit")
